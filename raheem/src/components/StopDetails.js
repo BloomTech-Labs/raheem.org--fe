@@ -26,9 +26,6 @@ const Heading2 = styled.h2`
     text-align: center;
 `;
 
-//defining tag type
-const { CheckableTag } = Tag;
-
 function StopDetails(props) {
 
     // setting state
@@ -42,12 +39,12 @@ function StopDetails(props) {
     return (
 
         <div>
-            <CheckableTag 
+            {/* <CheckableTag 
                 {...props} 
                 checked={ true }
                 color={'black'}
                 onChange={ handleChange } 
-            />
+            /> */}
 
             <div className="stopDetails">
                 <h2>How would you classify your stop?</h2>
@@ -69,18 +66,18 @@ function StopDetails(props) {
             <div className="tags">
                 {/* positive */}
                     <div>
-                        <CheckableTag>Helped</CheckableTag>
-                        <CheckableTag>Protected</CheckableTag>
+                        <button>Helped</button>
+                        <button>Protected</button>
                     </div>
 
                 {/* negative */}
                     <div>
-                        <CheckableTag>Physically Attacked</CheckableTag>
-                        <CheckableTag>Disrespected</CheckableTag>
-                        <CheckableTag>Wrongly Accused</CheckableTag>
-                        <CheckableTag>Harrassed</CheckableTag>
-                        <CheckableTag>Neglected</CheckableTag>
-                        <CheckableTag>Profiled</CheckableTag>
+                        <button>Physically Attacked</button>
+                        <button>Disrespected</button>
+                        <button>Wrongly Accused</button>
+                        <button>Harrassed</button>
+                        <button>Neglected</button>
+                        <button>Profiled</button>
                     </div>
             </div>
 

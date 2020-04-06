@@ -2,7 +2,7 @@ import React from 'react';
 import { useHistory } from 'react-router-dom';
 import '../../index.css';
 
-import { SaveOutlined } from '@ant-design/icons';
+import SaveAltOutlinedIcon from '@material-ui/icons/SaveAltOutlined';
 
 function Save() {
 
@@ -14,7 +14,7 @@ function Save() {
             e.preventDefault(); // prevent default refresh
             history.push(`/subscribe`); // push user to subscribe page to save submission
         }} className="save">
-            <SaveOutlined /> Save For Later
+            <SaveAltOutlinedIcon /> Save For Later
         </button>
     )
 }
