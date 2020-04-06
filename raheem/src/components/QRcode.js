@@ -7,6 +7,7 @@ import { Container, Content, Heading, SubHeading, ContentSep, Label, QRForm, QRC
 function QRcode() {
 
     const { register, handleSubmit, errors } = useForm();
+    
     const onSubmit = data => {
         console.log(data);
     }

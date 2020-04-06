@@ -9,11 +9,6 @@ import Controls from './buttons/Controls';
 // import GoBack from './buttons/GoBack';
 // import Save from './buttons/Save';
 
-/*antd components and icons */
-import { Tag } from 'antd';
-
-// import Tags from './Tags';
-
 const Form = styled.div`
     margin-left: auto;
     margin-right: auto;
@@ -58,20 +53,18 @@ function StopDetails(props) {
                 <h2>How would you classify your stop?</h2>
 
                 <div>
-                    <CheckableTag>Positive</CheckableTag>
-
-                    <CheckableTag>Negative</CheckableTag>
+                    {/* slider */}
                 </div>
             </div>
 
             <div className="tagsInstructions">
                 {/* display tags component after selection has been made */}
                 {/* set state for positive/negative display to pass to Tags component */}
+                
                 <p>
                     {/* instructions to user to click on appropriate tags */}
                 </p>
             </div>
-
 
             <div className="tags">
                 {/* positive */}

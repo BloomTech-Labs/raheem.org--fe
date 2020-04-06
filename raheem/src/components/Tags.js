@@ -1,64 +1,65 @@
-import React, { useState, useEffect } from "react";
+// import React, { useState, useEffect } from "react";
 
-//antd components
-import { Tag } from 'antd';
+// //antd components
+// import { Tag } from 'antd';
 
-//styles
-import styled from 'styled-components';
-
-//defining tag type
-const { CheckableTag } = Tag;
+// //styles
+// import styled from 'styled-components';
 
 
+// //defining tag type
+// const { CheckableTag } = Tag;
 
-//this component is used for displaying story tags 
-const Tags = (props) => {
 
-    // setting state
-    const [checked, setChecked] = useState(false);
-    const [positive, setPositive] = useState();
-    const [negative, setNegative] = useState();
 
-    // setting checked tags to true
-        const handleChange = checked => {
-            setChecked(true);
-        };
+// //this component is used for displaying story tags 
+// const Tags = (props) => {
 
-    return (
-    <div>
-        <p>
-            {/* instructions to user to click on appropriate tags */}
-        </p>
+//     // setting state
+//     const [checked, setChecked] = useState(false);
+//     const [positive, setPositive] = useState();
+//     const [negative, setNegative] = useState();
 
-        <div>
-            {/* tags display */}
+//     // setting checked tags to true
+//         const handleChange = checked => {
+//             setChecked(true);
+//         };
 
-            <CheckableTag 
-                {...props} 
-                checked={ false } 
-                color='black'
-                onChange={ handleChange } 
-            />
+//     return (
+//     <div>
+//         <p>
+//             {/* instructions to user to click on appropriate tags */}
+//         </p>
 
-            {/* positive */}
-            <div>
-                <CheckableTag>Helped</CheckableTag>
-                <CheckableTag>Protected </CheckableTag>
-            </div>
+//         <div>
+//             {/* tags display */}
 
-            {/* negative */}
-            <div>
-                <CheckableTag>Physically Attacked</CheckableTag>
-                <CheckableTag>Disrespected</CheckableTag>
-                <CheckableTag>Wrongly Accused</CheckableTag>
-                <CheckableTag>Harrassed</CheckableTag>
-                <CheckableTag>Neglected</CheckableTag>
-                <CheckableTag>Profiled</CheckableTag>
-            </div>
-        </div>
+//             <CheckableTag 
+//                 {...props} 
+//                 checked={ false } 
+//                 color='black'
+//                 onChange={ handleChange } 
+//             />
 
-    </div>
-    );
-};
+//             {/* positive */}
+//             <div>
+//                 <CheckableTag>Helped</CheckableTag>
+//                 <CheckableTag>Protected </CheckableTag>
+//             </div>
 
-export default Tags;
+//             {/* negative */}
+//             <div>
+//                 <CheckableTag>Physically Attacked</CheckableTag>
+//                 <CheckableTag>Disrespected</CheckableTag>
+//                 <CheckableTag>Wrongly Accused</CheckableTag>
+//                 <CheckableTag>Harrassed</CheckableTag>
+//                 <CheckableTag>Neglected</CheckableTag>
+//                 <CheckableTag>Profiled</CheckableTag>
+//             </div>
+//         </div>
+
+//     </div>
+//     );
+// };
+
+// export default Tags;

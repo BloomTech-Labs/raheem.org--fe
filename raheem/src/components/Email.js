@@ -3,9 +3,6 @@ import React from "react";
 //form validation
 import { useForm } from "react-hook-form";
 
-//antd components and icons
-import { MailOutlined } from '@ant-design/icons';
-
 //buttons
 import GoBack from "./buttons/GoBack.js";
 
@@ -37,7 +34,7 @@ const Email = () => {
         {/* on submit will need to direct to thank you page with confirmation to check email for next steps */}
 
             <div className="buttoncContainer">
-                <button type="submit"> <MailOutlined /> Submit</button>
+                <button type="submit"> Submit</button>
                 <GoBack />
             </div>
 
