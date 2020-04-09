@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import PersonIcon from '@material-ui/icons/Person';
+
 const OfficerPic = styled.img`
     margin-bottom: 2rem;
     width: 182px;
@@ -33,6 +35,7 @@ const DivO = styled.div`
     flex-direction: column;
     align-items: center;
     margin-bottom: 1rem;
+
 `;
 
 function Officer(props) {
