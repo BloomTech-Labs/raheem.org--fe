@@ -1,8 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
+import Officer from './Officer'
+
 //buttons
 import GoBack from './buttons/GoBack.js';
+
+//styles
+import { Container, Content } from '../styles/global';
 
 function ThankYou() {
 
@@ -29,41 +34,64 @@ function ThankYou() {
     }, []);
 
     return (
-        <ThankYouContainer>
-            {cancelled &&
-                <Cancelled>
-                    <h2>Thank You</h2>
-                    <p>Thank you for your time today.</p>
-                    <p>If you accidentally clicked on 'Exit', you can click the back button
-                    to return to the report submission form and continue filling out your report.
-                    Otherwise, we hope you have a great rest of the day.
-                    {/* goBack Button */}
-                    </p>
+        <Container>
+            <Content>
+                <Officer profile={{
+                    officer: "Officer Peyton",
+                    precinct: "#15",
+                    badge: "R4567"
+                }} />
 
-                    <ButtonContainer className="landingButtonContainer">
-                        <BackContainer>
-                            <GoBack />
-                            {/* go to thank you */}
-                        </BackContainer>
-                    </ButtonContainer>
-                </Cancelled>}
+                {cancelled &&
+                    <Cancelled>
+                        <ThankYouH1>Let us remind you</ThankYouH1>
+                        <ThankYouP>Type in your email and we can email you a reminder, so you can complete your in-depth review later</ThankYouP>
 
-            {submitted &&
+                        <ButtonContainer className="landingButtonContainer">
+                            <BackContainer>
+                                <GoBack />
+                                {/* go to thank you */}
+                            </BackContainer>
+                        </ButtonContainer>
+                    </Cancelled>}
+
                 <Submitted>
-                    <h2>Thank You</h2>
-                    <p>Thank you for taking the time to help build a safer community.</p>
-                    <p>For further escalation of your report, you have the following options: </p>
-                    <ul>
-                        <li>Escalate to Raheem staff.</li>
-                        <li>Escalate to the media.</li>
-                        <li>Escalate to law enforcement.</li>
-                    </ul>
-                </Submitted>}
-        </ThankYouContainer>
+                    <ThankYouH2>Thank you for your feedback!</ThankYouH2>
+                    <ThankYouH1>Report Submitted!</ThankYouH1>
+                    <ThankYouP>Your story will help end police violence.</ThankYouP>
+                </Submitted>
+            </Content>
+        </Container>
     )
 }
 
 export default ThankYou;
+
+const ThankYouH2 = styled.h2`
+    font-family: Noto Serif JP;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+`;
+
+const ThankYouH1 = styled.h1`
+    font-family: Neuzeit Grotesk;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 26px;
+    width: 100%;
+    line-height: 28px;
+    background-color: yellow;
+`;
+
+const ThankYouP = styled.p`
+    font-family: Neuzeit Grotesk;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 16px;
+`;
 
 const ThankYouContainer = styled.div`
     margin: 5rem 0;
