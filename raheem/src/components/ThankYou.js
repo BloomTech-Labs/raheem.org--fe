@@ -7,7 +7,7 @@ import Officer from './Officer'
 import GoBack from './buttons/GoBack.js';
 
 //styles
-import { Container, Content } from '../styles/global';
+import { Container, Content, SubHeading, Paragraph } from '../styles/global';
 
 function ThankYou() {
 
@@ -42,10 +42,15 @@ function ThankYou() {
                     badge: "R4567"
                 }} />
 
+                <hr />
+
                 {cancelled &&
                     <Cancelled>
-                        <ThankYouH1>Let us remind you</ThankYouH1>
-                        <ThankYouP>Type in your email and we can email you a reminder, so you can complete your in-depth review later</ThankYouP>
+                        <SubHeading>Let us remind you</SubHeading>
+                        <Paragraph>Type in your email and we can email you a reminder, so you can complete your in-depth review later</Paragraph>
+
+                        <p>Email</p>
+                        <input placeholder="email@emailaddress.com"/>
 
                         <ButtonContainer className="landingButtonContainer">
                             <BackContainer>
@@ -57,8 +62,8 @@ function ThankYou() {
 
                 <Submitted>
                     <ThankYouH2>Thank you for your feedback!</ThankYouH2>
-                    <ThankYouH1>Report Submitted!</ThankYouH1>
-                    <ThankYouP>Your story will help end police violence.</ThankYouP>
+                    <SubHeading>Report Submitted!</SubHeading>
+                    <Paragraph>Your story will help end police violence.</Paragraph>
                 </Submitted>
             </Content>
         </Container>
@@ -73,24 +78,6 @@ const ThankYouH2 = styled.h2`
     font-weight: bold;
     font-size: 20px;
     line-height: 24px;
-`;
-
-const ThankYouH1 = styled.h1`
-    font-family: Neuzeit Grotesk;
-    font-style: normal;
-    font-weight: 900;
-    font-size: 26px;
-    width: 100%;
-    line-height: 28px;
-    background-color: yellow;
-`;
-
-const ThankYouP = styled.p`
-    font-family: Neuzeit Grotesk;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 16px;
 `;
 
 const ThankYouContainer = styled.div`
