@@ -5,11 +5,20 @@ import Report from "../Report";
 //mock the Firestore database
 const { FakeFirestore } = require("firestore-jest-mock");
 
-// import "mutationobserver-shim";
+import "mutationobserver-shim";
+global.MutationObserver = window.MutationObserver;
+
 // import { ExpansionPanelActions, Input } from '@material-ui/core';
 // import { formStore, StateProvider } from '../../formStore.js';
 
-// global.MutationObserver = window.MutationObserver;
+
+jest.mock('react-router-dom', () => ({
+      ...jest.requireActual('react-router-dom'),
+    useHistory: () => ({
+      push: jest.fn()
+    }),
+    useLocation: () => ({})
+  }));
 
 //create a new Fakefirestore database
 const db = new FakeFirestore({
@@ -38,19 +47,11 @@ test("adds new report to a fakeCollection collection (database)", () => {
   });
   
 
-
-
-// jest.mock('react-router-dom', () => ({
-//       ...jest.requireActual('react-router-dom'),
-//     useHistory: () => ({
-//       push: jest.fn()
-//     })
-//   }));
-
-// describe('<Report />', () => {
-//     it('renders without crashing', () => {
-//         render(<Report />);
-//     })
+describe('<Report />', () => {
+    it('renders without crashing', () => {
+        render(<Report />);
+    })
+  })
 
     // it('submits a report', () => {
     //   const { getByText } = render(<Report />)

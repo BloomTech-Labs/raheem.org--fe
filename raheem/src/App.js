@@ -25,7 +25,7 @@ import Stats from './components/Dashboard/Stats';
 import Map from './components/Dashboard/Map';
 import StoryList from './components/Stories/StoryList';
 
-import Testgeo from './components/testGeo';
+import testGeo from './components/testGeo';
 
 /* structural styling components */
 import Header from './components/layout/Header';
