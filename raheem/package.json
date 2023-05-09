@@ -13,7 +13,7 @@
     "dayjs": "^1.8.25",
     "dotenv": "^8.2.0",
     "firebase": "^7.14.1",
-    "firebase-tools": "^8.1.1",
+    "firebase-tools": "^11.30.0",
     "firestore-jest-mock": "^0.3.0",
     "mapbox-gl": "^1.9.1",
     "mutationobserver-shim": "^0.3.5",
